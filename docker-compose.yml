@@ -2,16 +2,16 @@ version: "3.7"
 services:
   springapp:
     container_name: springbootapp
-    build: 'C:\Users\Amine\Documents\GitHub\ProjetDevops'
+    build: 'C:\Users\Dhia\OneDrive\Bureau\DevOps\5SE1-G4-Foyer'
     ports:
       - "8089:8089"
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://db-mysql:3306/kadem?createDatabaseIfNotExist=true&userSSL=false
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-mysql:3306/Foyer?createDatabaseIfNotExist=true&userSSL=false
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
     restart: unless-stopped
 
-    image: "damine99/kaddem:1.8"
+    image: "dhiaelair/foyer:1.0"
     depends_on:
       - db-mysql
 
